@@ -1,5 +1,9 @@
 package com.testmention;
 
+import android.graphics.Color;
+import android.view.ViewGroup;
+import android.widget.LinearLayout;
+
 import com.facebook.react.uimanager.SimpleViewManager;
 import com.facebook.react.bridge.Arguments;
 import com.facebook.react.bridge.ReactContext;
@@ -23,6 +27,9 @@ public class RichEditorViewManager extends SimpleViewManager<RichEditorView> {
   public RichEditorView createViewInstance(ThemedReactContext reactContext) {
 
     RichEditorView richEditorView = new RichEditorView(reactContext);
+    richEditorView.setLayoutParams(new LinearLayout.LayoutParams(ViewGroup.LayoutParams.MATCH_PARENT,200));
+    richEditorView.setHint("Hint");
+    richEditorView.setBackgroundColor(Color.BLUE);
     return richEditorView;
   }
 

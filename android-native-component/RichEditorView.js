@@ -1,5 +1,5 @@
 import React, { Component, PropTypes } from 'react';
-import { NativeModules, requireNativeComponent, View, Text } from 'react-native';
+import { NativeModules, requireNativeComponent, View, Text, } from 'react-native';
 
 class RichEditorViewComponent extends Component{
 constructor(props)
@@ -27,6 +27,7 @@ const RichEditorView = requireNativeComponent('RichEditorView', RichEditorViewCo
 	},
 });
 
+console.log('editorviewaaa',RichEditorView)
 export default RichEditorView;
 
 // var iface = {
